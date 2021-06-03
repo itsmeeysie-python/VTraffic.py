@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIRTUAL TICKETING FORMS</title>
+</head>
+<style>
+table, td, th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body style="background-color:white;">
+<center><h1 style="color:black";>LIST OF TRAFFIC VIOLATORS</h1></center>
+<table style="width:100%">
+  <tr>
+  
+    <th>Name of Officer Incharge: </th>
+    <th>Name of Violator:</th>
+    <th>Violation: </th>
+    <th>Sex:</th>
+    <th>Date:</th>
+    <th>Kind of License:</th>
+    <th>Licensed No.:</th>
+    </tr>
+<div class="cey">
+	{% for cey in cey %}
+	<div class="cey">
+
+    <tr>
+    <td>{{ forloop.counter }}:{{ cey.name1 }}</td>
+    <td>{{ cey.name2 }}</td>
+    <td>{{ cey.name3 }}</td>
+    <td>{{ cey.name4 }}</td>
+    <td>{{ cey.name5 }}</td>
+    <td>{{ cey.name6 }}</td>
+    <td>{{ cey.name7 }}</td>
+
+  </tr>
+
+
+</div>
+	{% endfor %}
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Ticketing Forms</title>
+</head>
+<body bgcolor="wheat">
+<h1 style="color:black;">Personal Information</h1>
+<div class="cey">
+	{% for cey in cey %}
+		<div class="cey">
+		<h3 style="border: 4px solid brown;">
+		<p>Name of Officer Incharge: {{ cey.name1 }}<p>
+		<p>Name of Violator: {{ cey.name2}}</p>
+		<p>Violation: {{ cey.name3 }}</p>
+		<p>Sex: {{ cey.name4 }}</p>
+		<p>Date: {{ cey.name5 }}</p>
+		<p>Kind of License: {{ cey.name6 }}</p>
+		<p>Licensed No: {{ cey.name7 }}</p>
+		</h3>
+
+</div>
+	{% endfor %}
+</body>
+</html> -->
