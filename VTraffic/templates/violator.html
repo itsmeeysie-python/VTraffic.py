@@ -1,0 +1,65 @@
+<html>
+<body bgcolor="darkblue">
+<head>
+<center>
+<title>Violators Page</title>
+</head>
+<h1 style="color:whitesmoke;font-size:70px;background-color: cadetblue; font-family: monospace;">E-Tickets</h1>
+<p style="color:whitesmoke;font-size
+:40px; font-family: cursive;">"Here's The Details Of Your Violation"</p>
+<p style="color:whitesmoke;font-size
+:25px; font-family: sans-serif;">You Must Take an Action Immediately to avoid more Penalties</p>
+<form method="POST" action="/VTraffic/newlist_url">
+
+  <label style="color:whitesmoke; font-size: 20; font-family: serif;">Name:</label>
+  <input 
+    type="ID" 
+    id="ID"
+    name="ID" 
+    size="40" 
+    placeholder="Enter your Name"
+  /><br/><br/>
+  
+  <label style="color:whitesmoke; font-size: 20; font-family: serif;">Date Caught:</label>
+  <input 
+    type="ID" 
+    id="ID"
+    name="ID" 
+    size="40" 
+    placeholder="Enter the Date"
+  /><br/><br/>
+
+  <label style="color:whitesmoke; font-size: 20; font-family: serif;">License Number:</label>
+  <input 
+    type="ID" 
+    id="ID"
+    name="ID" 
+    size="40" 
+    placeholder="License Number"
+  /><br/><br/>
+   
+  <input 
+    type="button" 
+    id="inConfirm" 
+    name="inConfirm" 
+    style="color: darkgoldenrod; background-color: antiquewhite;" 
+    value="Done"
+    onclick="myfunc()" 
+
+  />
+  {% csrf_token %}
+</center>
+</form>
+
+<table id="Table">
+  {% for item in newPerson%}
+  <tr>
+    <td>{{ forloop.counter }}: {{ item.text }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

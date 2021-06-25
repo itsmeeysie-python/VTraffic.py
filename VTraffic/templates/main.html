@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="darkblue">
+
+<center>
+<form>
+<h1 style="color:whitesmoke;font-size:70px; background-color:cadetblue;">E-Tickets</h1>
+
+<p style="color:aliceblue;font-style: italic; font-size:35px;">"Hello Welcome to E-Tickets"</p>
+
+<h3 style="color:whitesmoke;font-size:25px; font-family: monospace;">Are you?</h3>
+<label style="color:whitesmoke;font-size:50px" class="container">Officer
+  <input type="button" checked="checked" name="radio" onclick="myfunc()">
+  <span class="checkmark"></span>
+</label>
+<br>
+<br>
+<label style="color:whitesmoke;font-size:50px" class="container">Violator
+  <input type="button" name="radio" onclick="myfunction()"> 
+  <span class="checkmark"></span>
+</label>
+  <br><br>
+</center>
+</form>
+<script type="text/javascript">
+   function myfunc(inputElement){
+      window.location.href="/second";
+   }
+   function myfunction(inputElement){
+      window.location.href="/violation";
+   }
+</script>
+</body>
+</html>

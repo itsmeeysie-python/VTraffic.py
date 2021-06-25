@@ -1,0 +1,52 @@
+<html>
+<body bgcolor="darkblue">
+<head>
+<center>
+<title>Officer Page</title>
+</head>
+<h1 style="color:whitesmoke;font-size:50px;background-color: cadetblue; font-family: monospace;">Proof of Identification</h1>
+<br><br>
+<p style="color:whitesmoke;font-size
+:40px; font-family: cursive;">Hello Officer Kindly Provide your ID Number First Thank you!</p>
+<br><br>
+<form method="POST" action="/VTraffic/newlist_url">
+
+  <label style="color:whitesmoke; font-size: 30; font-family: serif;">ID Number:</label>
+  <input 
+    type="ID" 
+    id="ID"
+    name="ID" 
+    size="40" 
+    placeholder="Enter your Identification Number"
+  /><br/><br/>
+   
+  <input 
+    type="button" 
+    id="inConfirm" 
+    name="inConfirm" 
+    style="color: darkgoldenrod; background-color: antiquewhite;" 
+    value="Confirm"
+    onclick="myfunc()" 
+
+  />
+  {% csrf_token %}
+</center>
+</form>
+
+<script type="text/javascript">
+   function myfunc(inputElement){
+      window.location.href="/chief";
+   }
+</script>
+<table id="Table">
+  {% for item in newPerson%}
+  <tr>
+    <td>{{ forloop.counter }}: {{ item.text }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>
