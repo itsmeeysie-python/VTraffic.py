@@ -1,5 +1,4 @@
- <!DOCTYPE html>
- <<!DOCTYPE html>
+<!DOCTYPE html>
  <html>
  <head>
    <meta charset="utf-8">
@@ -69,26 +68,31 @@
             <option>Dirty/No/Not Firmly Attached Plate Number</option>
             <option>Obstruction</option>
 
-        <label for ="license number">Enter Numbers</label>
+        <label for ="license number">License no</label>
         <input type="text" name="license no" placeholder="His License..">
 
         <label for ="contact number">Enter Number</label>
         <input type="text" name="cell no" placeholder="His Cell No..">
 
-        <label for ="date">Enter Number</label>
+        <label for ="date">Date</label>
         <input type="text" name="mm dd yy" placeholder="Date Caught..">
 
-        <label for ="fine amount">Enter Number</label>
+        <label for ="fine amount">Amount</label>
         <input type="text" name="charge fee" placeholder="Amount..">
 
-        <label for ="name of officer">Enter Name</label>
+        <label for ="name of officer">Officer Incharge</label>
         <input type="text" name="full name" placeholder="Your Name..">
 
           </select>
-          <input type="submit" name="Submit">
+          
         </label>
+        <input type="button" name="Submit" onclick="myfunc()">
       </form>
     </div>
-
+    <script type="text/javascript">
+   function myfunc(inputElement){
+      window.location.href="/pay";
+   }
+</script>
      </body>
  </html>

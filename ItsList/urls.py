@@ -6,8 +6,14 @@ from VTraffic import views
 
 urlpatterns = [
 	path('admin/',admin.site.urls),
-	path('', views.Main, name="first"),
-	path('violation/', views.Violators, name='violation/'),
+	path('', views.Main, name="main"),
+	path('id/', views.Identification, name='id/'),
+	path('chief/', views.Officer,name='chief/'),
+	path('pay/', views.Checkout, name="pay/"),
+	path('pay/talk/', views.Communicate,name='pay/talk/'),
+	
+
+
 	
 	
 ]
